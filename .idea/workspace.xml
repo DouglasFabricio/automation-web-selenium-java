@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c2dca4b-bc17-4190-9d82-8e43e871a4db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation-web-selenium-java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DataHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DataHelper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +45,15 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.17011495"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Feature: teste_testers">
+  <component name="RunManager" selected="Cucumber Java.Feature: teste_BR3D_solucoes">
     <configuration name="Feature: teste_BR3D_solucoes" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jre1.8.0_361" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jre1.8.0_351" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="CUCUMBER_CORE_VERSION" value="2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/teste_BR3D_solucoes.feature" />
@@ -74,7 +75,7 @@
       </method>
     </configuration>
     <configuration name="Feature: teste_testers" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jre1.8.0_361" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jre1.8.0_351" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="CUCUMBER_CORE_VERSION" value="2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/teste_testers.feature" />
@@ -101,8 +102,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: teste_testers" />
         <item itemvalue="Cucumber Java.Feature: teste_BR3D_solucoes" />
+        <item itemvalue="Cucumber Java.Feature: teste_testers" />
       </list>
     </recent_temporary>
   </component>
