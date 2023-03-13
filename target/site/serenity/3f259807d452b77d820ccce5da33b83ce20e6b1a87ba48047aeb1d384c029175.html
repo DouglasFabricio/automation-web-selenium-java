@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Fechamento de caixa","type":"feature","href":"3f259807d452b77d820ccce5da33b83ce20e6b1a87ba48047aeb1d384c029175.html","nodes":[],"selectable":false,"tags":["",""]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Alliar</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Fechamento De Caixa</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                          <span>
+                                <h2><i class="fa fa-book"></i> Feature:  Fechamento De Caixa</h2>
+                            </span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="requirementNarrativeTitle">
+                                
+                            </div>
+
+                    </div>
+                </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"></a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#467ac81526f320f7f85e7bfe3c5f3a11d2de236d3abd44162c6a3081339a1a9b">Fechamento de caixa Operador, Gestor e Financeiro</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>felipe.dm</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p><p>Dado que é preenchido as informações da configuração da entrada de atendimento</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>areaAtendimento</th><th>grupoImpressao</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>UNIFICADA_1</td><td>SOMENTE VISUALIZAÇÃO (SEM IMPRESSORA)</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando é solicitado o acesso ao atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Financeiro</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Financeiro Lotes Fechamento</p>
+                                                            <p>Quando for selecionado Criar Lote na tela Financeiro Lotes Fechamento</p>
+                                                            <p>Então o sistema deve exibir a aba Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E forem preenchidos os filtros de pesquisa na tela Caixas Fechados em Financeiro Lotes Fechamento &quot;ConferidoFinanceiro&quot;</p>
+                                                            <p>E for pesquisado na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>Quando existir algum caixa o lote deve ser enviado</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Operador</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Operador Caixas Fechados</p>
+                                                            <p>E for selecionado abrir caixa</p>
+                                                            <p>E for confirmada abertura de um novo caixa zerado</p>
+                                                            <p>Quando for selecionado fechar novo caixa</p>
+                                                            <p>E for pesquisado pelos atendimentos na tab pagamentos</p>
+                                                            <p>E se existir lançamentos eles devem ser conferidos</p>
+                                                            <p>E for selecionado fechar caixa</p>
+                                                            <p>Quando for confirmado o fechamento selecionando ok</p>
+                                                            <p>E for salvo a conferência de caixa</p>
+                                                            <p>E for selecionado visualizar relatório</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Operador</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Operador Caixas Fechados</p>
+                                                            <p>E for selecionado abrir caixa</p>
+                                                            <p>E for confirmada abertura de um novo caixa zerado</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Entrada de Atendimento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Dado que eu seleciono a aba pesquisa de paciente</p>
+                                                            <p><p>Quando eu preencher os dados de pesquisa do paciente</p>
+<table>
+<thead>
+<tr><th>paciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMACAO PLERES</td><td>170.127.588-05</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o paciente for pesquisado na aba pesquisa de paciente</p>
+                                                            <p>Então o sistema deve exibir o paciente pesquisado</p>
+                                                            <p>Quando o paciente for selecionado na pesquisa de paciente</p>
+                                                            <p>E for iniciado um novo atendimento</p>
+                                                            <p>Então o sistema redirecionará para a aba dos dados do paciente</p>
+                                                            <p>Quando os dados do paciente forem salvos</p>
+                                                            <p>Então o sistema devera exibir a aba entrada de atendimentos</p>
+                                                            <p><p>Quando os campos da entrada da entrada de atendimento forem preenchidos</p>
+<table>
+<thead>
+<tr><th>senhaDoPainel</th><th>destinoDeLaudo</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>9</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E os campos do exames forem preenchidos</p>
+<table>
+<thead>
+<tr><th>convenio</th><th>plano</th><th>crm</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>1</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o exame for adicionado ao atendimento</p>
+                                                            <p>Então deverá ser exibido no grid o registro do exame inserido</p>
+                                                            <p>Quando o atendimento for salvo na entrada de atendimento</p>
+                                                            <p>E a pop-up mensagem de exames prontos for salva</p>
+                                                            <p>Então o sistema redirecionará para a aba entrega de resultados</p>
+                                                            <p><p>Quando os campos da entrega de resultados forem preenchidos</p>
+<table>
+<thead>
+<tr><th>meioDeEntrega</th></tr>
+</thead>
+<tbody>
+<tr><td>COBRAR NA ENTREGA</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E a aba da entrega de resultados for salva</p>
+                                                            <p>E aguarde o para o proximo passo</p>
+                                                            <p>Então o sistema redirecionará para a aba de documentos</p>
+                                                            <p>Quando os documentos forem salvos</p>
+                                                            <p>E aguarde o para o proximo passo</p>
+                                                            <p>Então o sistema redirecionará para aba medicamentos</p>
+                                                            <p><p>Quando o medicamento for preenchido</p>
+<table>
+<thead>
+<tr><th>nome</th></tr>
+</thead>
+<tbody>
+<tr><td>ADALEX RETARD</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando o medicamendo pesquisado for selecionado e incluído</p>
+                                                            <p>Então o medicamento deve ser exibido no grid de medicamentos relacionados</p>
+                                                            <p>Quando o medicamento for salvo na aba medicamentos</p>
+                                                            <p>Então o sistema redirecionará para a aba de pagamentos</p>
+                                                            <p><p>Quando os campos do tipo de pagamento forem preenchidos com base no valor total à pagar</p>
+<table>
+<thead>
+<tr><th>tipoDePagamento</th><th>observacao</th></tr>
+</thead>
+<tbody>
+<tr><td>Dinheiro</td><td>Automacao</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o pagamento for adicionado</p>
+                                                            <p>Então o sistema exibirá o registro do pagamento adicionando</p>
+                                                            <p>Quando eu acessar o pop-up de recibos</p>
+                                                            <p>E carregar os dados do paciente nas ações do recibo</p>
+                                                            <p>E salvar o recibo</p>
+                                                            <p>Então o sistema abrirá uma nova janela no browser</p>
+                                                            <p>Quando a nova janela do browser for finalizada</p>
+                                                            <p>E fechar o pop-up do recibo</p>
+                                                            <p>E finalizar o atendimento</p>
+                                                            <p>E confirmar a finalização do atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Quando for realizado a pesquisa do atendimento realizado</p>
+                                                            <p>Então o sistema exibe o registro do atendimento gerado</p>
+                                                            <p>E a cor do grid do atendimento não deve ser vermelha</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="467ac81526f320f7f85e7bfe3c5f3a11d2de236d3abd44162c6a3081339a1a9b">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Fechamento de caixa Operador, Gestor e Financeiro
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>felipe.dm</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p><p>Dado que é preenchido as informações da configuração da entrada de atendimento</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>areaAtendimento</th><th>grupoImpressao</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>UNIFICADA_1</td><td>SOMENTE VISUALIZAÇÃO (SEM IMPRESSORA)</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando é solicitado o acesso ao atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Operador</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Operador Caixas Fechados</p>
+                                                            <p>Quando for selecionado fechar novo caixa</p>
+                                                            <p>E for pesquisado pelos atendimentos na tab pagamentos</p>
+                                                            <p>E for selecionado todos os registros</p>
+                                                            <p>E for armazenado o valor total dos lançamentos</p>
+                                                            <p>E for selecionado conferir na tab pagamentos</p>
+                                                            <p>E for selecionado fechar caixa</p>
+                                                            <p>Então o valor total deve ser igual aos valores nos registros</p>
+                                                            <p>Quando for confirmado o fechamento selecionando ok</p>
+                                                            <p>E for salvo a conferência de caixa</p>
+                                                            <p>E for selecionado visualizar relatório</p>
+                                                            <p>Então o relatório de fechamento deve ser exibido</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Gestor</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Gestor Caixas Fechados</p>
+                                                            <p>Quando forem preenchidos os filtros de pesquisa na tela Gestor Caixas Fechados</p>
+                                                            <p>E for pesquisado na tela Gestor Caixas Fechados</p>
+                                                            <p>Então os registro deve ser validado com valor do caixa fechado Operador</p>
+                                                            <p>Quando os registros forem selecionados na tela Gestor Caixas Fechados</p>
+                                                            <p>E os registros forem conferidos na tela Gestor Caixas Fechados</p>
+                                                            <p>E for confirmado a visualização do relatório caixas fechados Gestor</p>
+                                                            <p>Então o relatório de fechamento deve ser exibido</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Fechamento de Caixa</td></tr>
+<tr><td>Financeiro</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Financeiro Lotes Fechamento</p>
+                                                            <p>Quando for selecionado Criar Lote na tela Financeiro Lotes Fechamento</p>
+                                                            <p>Então o sistema deve exibir a aba Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>Quando forem preenchidos os filtros de pesquisa na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E for pesquisado na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E os registros forem selecionados na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E for selecionado conferir caixa na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E for confirmada a conferência na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>Então o status do lançamento deve ser &quot;ConferidoFinanceiro&quot; na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>Quando for selecionado fechar lote na tela Caixas Fechados em Financeiro Lotes Fechamento</p>
+                                                            <p>E for confirmado o fechamento do lote com caixas no status Conferido Financeiro</p>
+                                                            <p>Então o valor total deve ser igual aos valores nos registros</p>
+                                                            <p>Quando for confirmado o fechamento do lote selecionando ok</p>
+                                                            <p>E forem preenchidos os filtros de pesquisa na Lotes fechamento em Financeiro Lotes Fechamento</p>
+                                                            <p>Então o valor total deve ser igual aos valores nos registros totais</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Scenarios</th>
+                                                    <th scope="col" colspan="2" class="automated-stats">
+                                                        Automated
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr class="summary-stats">
+                                                    <td class="aggregate-result-count">Total</td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            
+                                                    </td>
+                                                    <td>75</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Fechamento de caixa Operador, Gestor e Financeiro
+                                                    </td>
+                                                    <td>46</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.4</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

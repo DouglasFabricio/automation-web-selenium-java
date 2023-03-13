@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Validar campos de triagem","type":"feature","href":"049b07f06143cb30957b701cb273dd29177931a91af9c62cfe3f3a10d656fc80.html","nodes":[],"selectable":false,"tags":["",""]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Alliar</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Validar Campos De Triagem</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                          <span>
+                                <h2><i class="fa fa-book"></i> Feature:  Validar Campos De Triagem</h2>
+                            </span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="requirementNarrativeTitle">
+                                Permitir que o usuário valide os campos de Triagem
+                            </div>
+
+                    </div>
+                </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"></a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#244bbf605d4c5fd9ca7a7fe1e6ffb58cf22b1ea495fdd983e445c0d2c892f456">Verificar Validação dos Campos Obrigatórios de CPF, Telefone, Data de Nascimento e Unidade</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#ad4ddc3c93669db6b3d2f92098d96756d3b946c8e6300ecb190d56494b4c038a">Verificar o campo Periodo, trocando os horarios manha e tarde.</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#8faa62ef74549b94f233eb42dc213a4296a58c2fda803dfc57589aec4adc51dd">Verificar campo Data, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#79e12eb59b5f8caf52224e73a614edd506cbbe73af51579794f4fed92b217f8c">Verificar campo Tipo Horario, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#373d23a13438832947e85dda887b3b416e6d898dc58858bff9057eac3f5baff5">Verificar flag Melhor Dia, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#2e4348127f794b8a5475412299e0d13ec8b1443bd9007188423ef42ed78ae31c">Verificar campo Unidade, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e0a77010dbe9541a63e2bb9ce5fa58f8cca3c57f5329c330d005ca3ee6d4c493">Verificar obrigatoriedade do campo Matricula (Convenio Pref e B) de acordo com a configuração no Convenio</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#22e7ee816479af078e5ebd7514e2f9e7e050c8f3629413ba866a61153d0ebba7">Verificar obrigatoriedade do campo Medico Solicitante e Pedido Médico de acordo com a configuração no Convenio</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#73d84b03e753c00a5d6a886dc79bad921c4852a131acf71189bcfd89422382cc">Verificar campo Med Preferencial, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e1a95ddee2ce879c8a2f672e1770ddd8732ae537b8084d0bf0b291a99aca0312">Verificar campo Sexo Medico, respeitando na aba horarios</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#2de57b9339d22a84c1f6cc339fbfb939d3bdbc72c91496070a6f83889ecfc200">Verificar se ao inserir o Exame o sistema está validando as coberturas de Convenio e Unidade</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e4d866ae6fbff5ed8342ba036f9f7a73368ddbf83971c3426b03b56a86b700bc">Verificar exclusão de exames</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="244bbf605d4c5fd9ca7a7fe1e6ffb58cf22b1ea495fdd983e445c0d2c892f456">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar Validação dos Campos Obrigatórios de CPF, Telefone, Data de Nascimento e Unidade
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Então eu irei validar CPF não preenchido da triagem</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>795.464.280-19</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p><p>Então eu irei validar telefone não preenchido da triagem</p>
+<table>
+<thead>
+<tr><th>dddTelefone</th><th>telefone</th></tr>
+</thead>
+<tbody>
+<tr><td>11</td><td>20209999</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Então eu irei validar data de nascimento não preenchido da triagem</p>
+<table>
+<thead>
+<tr><th>datanascimento</th><th>01021910</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p><p>Então eu irei validar unidade não preenchido da triagem</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>1</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="ad4ddc3c93669db6b3d2f92098d96756d3b946c8e6300ecb190d56494b4c038a">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar o campo Periodo, trocando os horarios manha e tarde.
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então eu irei validar manha e tarde da triagem</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="8faa62ef74549b94f233eb42dc213a4296a58c2fda803dfc57589aec4adc51dd">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar campo Data, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Então eu irei validar a data da triagem com a data aba horarios</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="79e12eb59b5f8caf52224e73a614edd506cbbe73af51579794f4fed92b217f8c">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar campo Tipo Horario, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho o filtro de Tipo Horario na aba triagem</p>
+<table>
+<thead>
+<tr><th>tipohorario</th><th>Internação</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p><p>Então eu irei validar o tipo horario da aba triagem com a tipo horario da  aba horarios</p>
+<table>
+<thead>
+<tr><th>tipohorario</th><th>5</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="373d23a13438832947e85dda887b3b416e6d898dc58858bff9057eac3f5baff5">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar flag Melhor Dia, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E preencho o filtro de flag melhor dia na aba triagem</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Então eu irei validar a flag melhor dia da aba triagem com a flag melhor dia da  aba horarios</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2e4348127f794b8a5475412299e0d13ec8b1443bd9007188423ef42ed78ae31c">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar campo Unidade, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho o filtro de unidade na aba triagem</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>1</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>11673</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p><p>Então eu irei validar a unidade da aba triagem com a unidade da  aba horarios.</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>MARSELHESA</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="e0a77010dbe9541a63e2bb9ce5fa58f8cca3c57f5329c330d005ca3ee6d4c493">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar obrigatoriedade do campo Matricula (Convenio Pref e B) de acordo com a configuração no Convenio
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E apago a matricula do convenio preferencial</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então valido a mensagem de obrigatoriedade de matricula para o convenio preferencial</p>
+                                                            <p><p>E preencho os dados para o convenio plano validade e matricula B</p>
+<table>
+<thead>
+<tr><th>convenioB</th><th>planoB</th><th>validadeB</th><th>matriculaB</th></tr>
+</thead>
+<tbody>
+<tr><td>323</td><td>8036</td><td>12012030</td><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="22e7ee816479af078e5ebd7514e2f9e7e050c8f3629413ba866a61153d0ebba7">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar obrigatoriedade do campo Medico Solicitante e Pedido Médico de acordo com a configuração no Convenio
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E apago a matricula do convenio preferencial</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados do medico solicitante sem preencher a data do pedido</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então valido a mensagem de obrigatoriedade da data do pedido</p>
+                                                            <p><p>E preencho os dados da data do pedido e sem preencher o medico solicitante</p>
+<table>
+<thead>
+<tr><th>dataDoPedido</th></tr>
+</thead>
+<tbody>
+<tr><td>27012021</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então valido a mensagem de obrigatoriedade do medico solicitante</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="73d84b03e753c00a5d6a886dc79bad921c4852a131acf71189bcfd89422382cc">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar campo Med Preferencial, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados do medico preferencial</p>
+<table>
+<thead>
+<tr><th>medicoPreferencial</th></tr>
+</thead>
+<tbody>
+<tr><td>90433</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>USABSUP</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então valido o medico preferencial respeitando a aba horarios</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="e1a95ddee2ce879c8a2f672e1770ddd8732ae537b8084d0bf0b291a99aca0312">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar campo Sexo Medico, respeitando na aba horarios
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho os dados do medico preferencial</p>
+<table>
+<thead>
+<tr><th>sexoMedico</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>USABTOT</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então valido o medico do sexo masculino respeitando a aba horarios</p>
+                                                            <p>E volto para a aba triagem</p>
+                                                            <p>E irei excluir o exame da grid na aba triagem</p>
+                                                            <p><p>E preencho os dados do medico preferencial</p>
+<table>
+<thead>
+<tr><th>sexoMedico</th></tr>
+</thead>
+<tbody>
+<tr><td>2</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>USABTOT</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então valido o medico do sexo feminino respeitando a aba horarios</p>
+                                                            <p>E volto para a aba triagem</p>
+                                                            <p>E irei excluir o exame da grid na aba triagem</p>
+                                                            <p><p>E preencho os dados do medico preferencial</p>
+<table>
+<thead>
+<tr><th>sexoMedico</th></tr>
+</thead>
+<tbody>
+<tr><td>3</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>USABTOT</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então valido os medicos de ambos os sexos masculino feminino respeitando a aba horarios</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2de57b9339d22a84c1f6cc339fbfb939d3bdbc72c91496070a6f83889ecfc200">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar se ao inserir o Exame o sistema está validando as coberturas de Convenio e Unidade
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E apago o convenio preferencial</p>
+                                                            <p>E apago o convenio b</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então valido a cobertura sem o convenio</p>
+                                                            <p>E apago a unidade</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>medicoSolicitante</th></tr>
+</thead>
+<tbody>
+<tr><td>323</td><td>8036</td><td>44421</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então valido a cobertura sem a unidade</p>
+                                                            <p><p>E preencho os dados de matricula</p>
+<table>
+<thead>
+<tr><th>matriculaA</th></tr>
+</thead>
+<tbody>
+<tr><td>443378690000140</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E preencho o filtro de unidade na aba triagem</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>1</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p><p>E incluo um exame para agendamento</p>
+<table>
+<thead>
+<tr><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="e4d866ae6fbff5ed8342ba036f9f7a73368ddbf83971c3426b03b56a86b700bc">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar exclusão de exames
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>PACIENTE AUTOMAÇÃO QA</td><td>795.464.280-19</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E irei excluir o exame da grid na aba triagem</p>
+                                                            <p>Então valido a exclusão do exame</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Scenarios</th>
+                                                    <th scope="col" colspan="2" class="automated-stats">
+                                                        Automated
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr class="summary-stats">
+                                                    <td class="aggregate-result-count">Total</td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar Validação dos Campos Obrigatórios de CPF, Telefone, Data de Nascimento e Unidade
+                                                    </td>
+                                                    <td>7</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar o campo Periodo, trocando os horarios manha e tarde.
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar campo Data, respeitando na aba horarios
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar campo Tipo Horario, respeitando na aba horarios
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar flag Melhor Dia, respeitando na aba horarios
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar campo Unidade, respeitando na aba horarios
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar obrigatoriedade do campo Matricula (Convenio Pref e B) de acordo com a configuração no Convenio
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar obrigatoriedade do campo Medico Solicitante e Pedido Médico de acordo com a configuração no Convenio
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar campo Med Preferencial, respeitando na aba horarios
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar campo Sexo Medico, respeitando na aba horarios
+                                                    </td>
+                                                    <td>17</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar se ao inserir o Exame o sistema está validando as coberturas de Convenio e Unidade
+                                                    </td>
+                                                    <td>16</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar exclusão de exames
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.4</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

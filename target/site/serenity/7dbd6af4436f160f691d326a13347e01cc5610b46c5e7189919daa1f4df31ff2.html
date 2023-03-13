@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Validar consulta transferencia cancelamento","type":"feature","href":"7dbd6af4436f160f691d326a13347e01cc5610b46c5e7189919daa1f4df31ff2.html","nodes":[],"selectable":false,"tags":["",""]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Alliar</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Validar Consulta Transferencia Cancelamento</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                          <span>
+                                <h2><i class="fa fa-book"></i> Feature:  Validar Consulta Transferencia Cancelamento</h2>
+                            </span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="requirementNarrativeTitle">
+                                Permitir que o usuário valide a consulta transferencia cancelamento
+                            </div>
+
+                    </div>
+                </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"></a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#2e875408bdc6e09bd956ac521de94b99e02a3a46cf7332ea9199f0426684ef7c">Pesquisar pela combo Status</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#54ebed96796c368aa5e854566d90c0330d2711ac82ef434e29417dab97efc148">Verificar botão Instrução</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#6136e366b0b259a1e79c152ed6ac4753b8127a558105dc6a0f7d15bae157f660">Verificar botão Enviar Preparo</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#7824dfe6a79301c97cb59dfb9846e391a1a08a0fea90cd0f082becf3c6895306">Verificar botão Finalizar</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#a310cdaf5a5a388e78a4b4596dea0dbb8ff36ae879189c40139f693d3519f07e">Verificar botão Cancelar</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#2c65819495ccdbd5cd21a2b5519834935f454fa4123a6e19978ccfc0e3004b10">Verificar botão Reagendar</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#3580096177694cf7f50ed5d878422727bf3d9ca208f56cd87da35921cc4d2d3a">Alterar dados do filtro de atendimento</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#c98ec0e964abf2cbb9af0f8909ec8a9ca3664a994895a02206e7432ac9dbbdd9">Verificar botão Rastro</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#64a5a95f24ea83bec56a3fcef2001509a2fb7f6cee5a71fc904ae28305cbd7b9">Verificar botão Medico Solicitante</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#61ccfcd2cdea91a6996b119c46c206c8f539863979c8c71c82c7012cda56523c">Verificar botão Protocolos</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2e875408bdc6e09bd956ac521de94b99e02a3a46cf7332ea9199f0426684ef7c">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Pesquisar pela combo Status
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMACAO SAC</td><td>237.857.668-40</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>GLI</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Quando o campo data for preenchido com a data atual</p>
+                                                            <p><p>E os campos de pesquisa do horário forem preenchidos corretamente</p>
+<table>
+<thead>
+<tr><th>melhorDia</th></tr>
+</thead>
+<tbody>
+<tr><td>naoSelecionado</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o horário for selecionado</p>
+                                                            <p>E for clicado no botão Salvar Agendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba de Confirmação de Agendamento</p>
+                                                            <p>Quando eu confirmar o agendamento do exame</p>
+                                                            <p>Então o sistema deverá gerar um número de protocolo</p>
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>237.857.668-40</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p><p>Dado que pesquiso por atendimentos com filtro</p>
+<table>
+<thead>
+<tr><th>status</th></tr>
+</thead>
+<tbody>
+<tr><td>Futuros</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então irei visualizar os dados do atendimento no grid com status &quot;Agendado&quot;</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="54ebed96796c368aa5e854566d90c0330d2711ac82ef434e29417dab97efc148">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Instrução
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Dado que eu irei abrir a tela de instruções</p>
+                                                            <p>Então irei visualizar os dados na tela de instruções</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="6136e366b0b259a1e79c152ed6ac4753b8127a558105dc6a0f7d15bae157f660">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Enviar Preparo
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Então eu irei enviar o preparo de email com sucesso</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="7824dfe6a79301c97cb59dfb9846e391a1a08a0fea90cd0f082becf3c6895306">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Finalizar
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMATIZADOR QA</td><td>866.696.290-95</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>GLI</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Quando o campo data for preenchido com a data atual</p>
+                                                            <p><p>E os campos de pesquisa do horário forem preenchidos corretamente</p>
+<table>
+<thead>
+<tr><th>melhorDia</th></tr>
+</thead>
+<tbody>
+<tr><td>naoSelecionado</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o horário for selecionado</p>
+                                                            <p>E for clicado no botão Salvar Agendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba de Confirmação de Agendamento</p>
+                                                            <p>Quando eu confirmar o agendamento do exame</p>
+                                                            <p>Então o sistema deverá gerar um número de protocolo</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Então eu irei finalizar o atendimento</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="a310cdaf5a5a388e78a4b4596dea0dbb8ff36ae879189c40139f693d3519f07e">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Cancelar
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMATIZADOR QA</td><td>866.696.290-95</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>GLI</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Quando o campo data for preenchido com a data atual</p>
+                                                            <p><p>E os campos de pesquisa do horário forem preenchidos corretamente</p>
+<table>
+<thead>
+<tr><th>melhorDia</th></tr>
+</thead>
+<tbody>
+<tr><td>naoSelecionado</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o horário for selecionado</p>
+                                                            <p>E for clicado no botão Salvar Agendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba de Confirmação de Agendamento</p>
+                                                            <p>Quando eu confirmar o agendamento do exame</p>
+                                                            <p>Então o sistema deverá gerar um número de protocolo</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p><p>Dado que pesquiso por atendimentos com filtro</p>
+<table>
+<thead>
+<tr><th>status</th></tr>
+</thead>
+<tbody>
+<tr><td>Futuros</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então eu irei cancelar o atendimento</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2c65819495ccdbd5cd21a2b5519834935f454fa4123a6e19978ccfc0e3004b10">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Reagendar
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E inicio agendamento para o paciente com os dados</p>
+<table>
+<thead>
+<tr><th>nomePaciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMATIZADOR QA</td><td>866.696.290-95</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>RMCRANIO</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Quando for realizado o preenchimento dos campos exame e incluídos para agendamento</p>
+<table>
+<thead>
+<tr><th>convenioA</th><th>planoA</th><th>validadeA</th><th>medicoSolicitante</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>01/05/2030</td><td>44421</td><td>GLI</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário do exame for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Quando o campo data for preenchido com a data atual</p>
+                                                            <p><p>E os campos de pesquisa do horário forem preenchidos corretamente</p>
+<table>
+<thead>
+<tr><th>melhorDia</th></tr>
+</thead>
+<tbody>
+<tr><td>naoSelecionado</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o horário for selecionado</p>
+                                                            <p>E for clicado no botão Salvar Agendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba de Confirmação de Agendamento</p>
+                                                            <p>Quando eu confirmar o agendamento do exame</p>
+                                                            <p>Então o sistema deverá gerar um número de protocolo</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p><p>Dado que pesquiso por atendimentos com filtro</p>
+<table>
+<thead>
+<tr><th>status</th></tr>
+</thead>
+<tbody>
+<tr><td>Futuros</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E eu irei selecionar o agendamento no grid</p>
+                                                            <p>E iniciar o reagendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba Triagem</p>
+                                                            <p>Quando for clicado no botão Selecionar Horário</p>
+                                                            <p>Então o sistema redirecionará para aba de Questionários</p>
+                                                            <p>Quando o questionário for preenchido de forma correta</p>
+                                                            <p>E o questionário for salvo</p>
+                                                            <p>Então o sistema redirecionará para a aba Horário</p>
+                                                            <p>Quando o campo data for preenchido com a data atual</p>
+                                                            <p>E o horário for selecionado</p>
+                                                            <p>E for clicado no botão Salvar Agendamento</p>
+                                                            <p>Então o sistema redirecionará para a aba de Confirmação de Agendamento</p>
+                                                            <p>Quando eu confirmar o agendamento do exame</p>
+                                                            <p>Então o sistema deverá gerar um número de protocolo</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="3580096177694cf7f50ed5d878422727bf3d9ca208f56cd87da35921cc4d2d3a">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Alterar dados do filtro de atendimento
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p><p>Dado que altero o filtro do atendimento</p>
+<table>
+<thead>
+<tr><th>peso</th></tr>
+</thead>
+<tbody>
+<tr><td>700</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então irei salvar o filtro do atendimento</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="c98ec0e964abf2cbb9af0f8909ec8a9ca3664a994895a02206e7432ac9dbbdd9">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Rastro
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Dado que eu irei abrir a tela de rastro</p>
+                                                            <p>Então eu irei visualizar os dados da tela de rastro</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="64a5a95f24ea83bec56a3fcef2001509a2fb7f6cee5a71fc904ae28305cbd7b9">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Medico Solicitante
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Dado que eu irei abrir a tela de medico solicitante</p>
+                                                            <p>Então eu irei visualizar os dados da tela de medico solicitante</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="61ccfcd2cdea91a6996b119c46c206c8f539863979c8c71c82c7012cda56523c">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Verificar botão Protocolos
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                            <p>Dado que eu irei abrir a tela de protocolos</p>
+                                                            <p>Então eu irei visualizar os dados da tela de protocolos</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Scenarios</th>
+                                                    <th scope="col" colspan="2" class="automated-stats">
+                                                        Automated
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr class="summary-stats">
+                                                    <td class="aggregate-result-count">Total</td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Pesquisar pela combo Status
+                                                    </td>
+                                                    <td>20</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Instrução
+                                                    </td>
+                                                    <td>6</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Enviar Preparo
+                                                    </td>
+                                                    <td>5</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Finalizar
+                                                    </td>
+                                                    <td>20</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Cancelar
+                                                    </td>
+                                                    <td>21</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Reagendar
+                                                    </td>
+                                                    <td>34</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Alterar dados do filtro de atendimento
+                                                    </td>
+                                                    <td>6</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Rastro
+                                                    </td>
+                                                    <td>6</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Medico Solicitante
+                                                    </td>
+                                                    <td>6</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Verificar botão Protocolos
+                                                    </td>
+                                                    <td>6</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.4</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
