@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Validar campos na consulta","type":"feature","href":"d6a6d398a6e461cbf2dae207ad2de5e84310c2bb6313b7a427d09d23f516a83e.html","nodes":[],"selectable":false,"tags":["",""]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Alliar</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Validar Campos Na Consulta</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                          <span>
+                                <h2><i class="fa fa-book"></i> Feature:  Validar Campos Na Consulta</h2>
+                            </span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="requirementNarrativeTitle">
+                                Permitir que o usuário valide os campos da consulta
+                            </div>
+
+                    </div>
+                </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"></a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#a5b6d5fd6b03c40967c4b7fe068e6822ca4f73087c9e84542e91076b5c5fef97">Consulta Protocolo</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#fde28152dac1ccbd22b278572b6ffd9507a81f184f822a19087172e0340bf85f">Consulta Nome Paciente</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#3efe2e118e664c9d3225c04ecb28cb968d076e8d1a9ca9b146018dea65a54a95">Consulta CPF</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#5275ff02592d24ab1a202a0d772126d6ee62c8ecd55a6c38b4604fcee462a268">Consulta RG</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#f21d25960104391cbc08761744fed05eee0b797c1a87aff0e971331ea7d77c47">Consulta Telefone</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#02873d5a749b7adb4978a2733114aebe7b9b2366008b896b1cfdb3a683566c00">Consulta Data Nascimento</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#038189c03d520267a6410424d72d6a021f27353a03da2ea04ad128a2e99c66ba">Consulta E-mail</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#6e87d2b290fb90fdabdb5afd9ecb625c1bd354794d3162a4d10be10d2b25dc7f">Consulta Tela de Protocolos</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#6668c5ba3d02a3637b548a407d874d280d2af50404ed225581d42a6c187fcf09">Abrir links de Imagens Observações e Instruções na Aba Protocolos</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#ffa819ed41717caaa71569e13afedb3f6614a7f0565f009f126fd1abce7a9a95">Abrir Tela Prontuario</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#8d56503a57e075a7ddc63cc8fda4fa5a9fef5b968cc6f9411b780194e7b7df58">Abrir Tela Sugestão</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#d0f67e6903fb54e99960ddf68b18d18b3326bce06e6434dde78295c2cdfff439">Abrir Tela Reclamação</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#690262c52ee7f94df6d40985f6fa56ca1d8a774f37829e896ec602c20bf353bf">Abrir tela de Outras Informações</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#93c093bec4fe367abc5c4c7287908843b29a277b599c7f6e361ddd3ea77631a3">Abrir tela de Consulta Transferencia e Cancelamento</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e7b3ea48f9172537e044d195f22352a0b0cd42ea7cb20ba981d866c8c060ee8d">Validar tela de Coleta Domiciliar</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;SAC&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Agendamento</td></tr>
+</tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="a5b6d5fd6b03c40967c4b7fe068e6822ca4f73087c9e84542e91076b5c5fef97">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta Protocolo
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso por número de protocolo</p>
+<table>
+<thead>
+<tr><th>protocolo</th><th>13736862</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema redirecionará para a aba Histórico</p>
+                                                            <p>Então o sistema deve exibir o exame no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="fde28152dac1ccbd22b278572b6ffd9507a81f184f822a19087172e0340bf85f">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta Nome Paciente
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo nome do paciente</p>
+<table>
+<thead>
+<tr><th>paciente</th><th>PACIENTE AUTOMAÇÃO QA</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="3efe2e118e664c9d3225c04ecb28cb968d076e8d1a9ca9b146018dea65a54a95">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta CPF
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="5275ff02592d24ab1a202a0d772126d6ee62c8ecd55a6c38b4604fcee462a268">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta RG
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo RG</p>
+<table>
+<thead>
+<tr><th>rg</th><th>ABCDEFGHI</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="f21d25960104391cbc08761744fed05eee0b797c1a87aff0e971331ea7d77c47">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta Telefone
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo ddd telefone</p>
+<table>
+<thead>
+<tr><th>ddd</th><th>11</th></tr>
+</thead>
+<tbody>
+<tr><td>telefone</td><td>20209999</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="02873d5a749b7adb4978a2733114aebe7b9b2366008b896b1cfdb3a683566c00">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta Data Nascimento
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pela data de nascimento</p>
+<table>
+<thead>
+<tr><th>datanascimento</th><th>01021910</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="038189c03d520267a6410424d72d6a021f27353a03da2ea04ad128a2e99c66ba">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta E-mail
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo e-mail</p>
+<table>
+<thead>
+<tr><th>email</th><th>pacienteautomacaoqa@gmail.com</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="6e87d2b290fb90fdabdb5afd9ecb625c1bd354794d3162a4d10be10d2b25dc7f">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Consulta Tela de Protocolos
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pela tela de protocolos</p>
+<table>
+<thead>
+<tr><th>protocolo</th><th>13736862</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid na tela de protocolo</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="6668c5ba3d02a3637b548a407d874d280d2af50404ed225581d42a6c187fcf09">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir links de Imagens Observações e Instruções na Aba Protocolos
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso por número de protocolo</p>
+<table>
+<thead>
+<tr><th>protocolo</th><th>13736862</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema redirecionará para a aba Histórico</p>
+                                                            <p>Então o sistema deve exibir o exame no grid</p>
+                                                            <p>Dado eu irei abrir link de imagens</p>
+                                                            <p>Então irei visualizar a tela de imagens</p>
+                                                            <p>Dado que eu irei abrir o link de observações</p>
+                                                            <p>Então irei visualizar a tela de observações</p>
+                                                            <p>Dado que eu irei abrir o link de instruções</p>
+                                                            <p>Então irei visualizar a tela de instruções</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="ffa819ed41717caaa71569e13afedb3f6614a7f0565f009f126fd1abce7a9a95">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir Tela Prontuario
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de prontuario</p>
+                                                            <p>Então eu irei visualizar os dados de prontuario</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="8d56503a57e075a7ddc63cc8fda4fa5a9fef5b968cc6f9411b780194e7b7df58">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir Tela Sugestão
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de sugestão</p>
+                                                            <p>Então eu irei visualizar os dados de sugestão</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="d0f67e6903fb54e99960ddf68b18d18b3326bce06e6434dde78295c2cdfff439">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir Tela Reclamação
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de reclamação</p>
+                                                            <p>Então eu irei visualizar os dados de reclamação</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="690262c52ee7f94df6d40985f6fa56ca1d8a774f37829e896ec602c20bf353bf">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir tela de Outras Informações
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de informações</p>
+                                                            <p>Então eu irei visualizar os dados de informações</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="93c093bec4fe367abc5c4c7287908843b29a277b599c7f6e361ddd3ea77631a3">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Abrir tela de Consulta Transferencia e Cancelamento
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de consulta tranferencia cancelamento</p>
+                                                            <p>Então eu irei visualizar os dados de consulta transferencia cancelamento</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="e7b3ea48f9172537e044d195f22352a0b0cd42ea7cb20ba981d866c8c060ee8d">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Validar tela de Coleta Domiciliar
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que eu pesquiso pelo CPF</p>
+<table>
+<thead>
+<tr><th>cpf</th><th>79546428019</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve exibir o paciente no grid</p>
+                                                            <p>Dado que eu irei abrir a tela de coleta domiciliar</p>
+                                                            <p>Então eu irei visualizar os dados de coleta domiciliar</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Scenarios</th>
+                                                    <th scope="col" colspan="2" class="automated-stats">
+                                                        Automated
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr class="summary-stats">
+                                                    <td class="aggregate-result-count">Total</td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            
+                                                    </td>
+                                                    <td>8</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta Protocolo
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta Nome Paciente
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta CPF
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta RG
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta Telefone
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta Data Nascimento
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta E-mail
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Consulta Tela de Protocolos
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir links de Imagens Observações e Instruções na Aba Protocolos
+                                                    </td>
+                                                    <td>9</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir Tela Prontuario
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir Tela Sugestão
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir Tela Reclamação
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir tela de Outras Informações
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Abrir tela de Consulta Transferencia e Cancelamento
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Validar tela de Coleta Domiciliar
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.4</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

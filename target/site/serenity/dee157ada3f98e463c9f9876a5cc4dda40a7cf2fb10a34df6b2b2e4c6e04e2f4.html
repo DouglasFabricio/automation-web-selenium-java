@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Telerradiologia   nova coleta   conjugado","type":"feature","href":"dee157ada3f98e463c9f9876a5cc4dda40a7cf2fb10a34df6b2b2e4c6e04e2f4.html","nodes":[],"selectable":false,"tags":["",""]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Alliar</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Telerradiologia - Nova Coleta - Conjugado</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                          <span>
+                                <h2><i class="fa fa-book"></i> Feature:  Telerradiologia - Nova Coleta - Conjugado</h2>
+                            </span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="requirementNarrativeTitle">
+                                Como usuário do sistema<br />
+Eu quero realizar a reconvocação da telerradiologia<br />
+Afim de validar que o retorno do status foi alterado para Nova Coleta
+                            </div>
+
+                    </div>
+                </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"></a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="toc-title"><a href="#eb033e488f5c4e859a681a4db6554baa2928125def32ade8816fb59ba90303a2">Telerradiologia - Realizar retorno status Nova Coleta - Conjugado</a></li>
+                                                            </td>
+                                                            <td>
+                                                               
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;Pleres&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Entrada de Atendimento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela para configuração da entrada de atendimento</p>
+                                                            <p><p>Dado que é preenchido as informações da configuração da entrada de atendimento</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>areaAtendimento</th><th>grupoImpressao</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>UNIFICADA_1</td><td>SOMENTE VISUALIZAÇÃO (SEM IMPRESSORA)</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando é solicitado o acesso ao atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Dado que eu seleciono a aba pesquisa de paciente</p>
+                                                            <p><p>Quando eu preencher os dados de pesquisa do paciente</p>
+<table>
+<thead>
+<tr><th>paciente</th><th>cpf</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMACAO PLERES</td><td>17012758805</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o paciente for pesquisado na aba pesquisa de paciente</p>
+                                                            <p>Então o sistema deve exibir o paciente pesquisado</p>
+                                                            <p>Quando o paciente for selecionado na pesquisa de paciente</p>
+                                                            <p>E for iniciado um novo atendimento</p>
+                                                            <p>Então o sistema redirecionará para a aba dos dados do paciente</p>
+                                                            <p>Quando os dados do paciente forem salvos</p>
+                                                            <p>Então o sistema devera exibir a aba entrada de atendimentos</p>
+                                                            <p><p>Quando os campos da entrada da entrada de atendimento forem preenchidos</p>
+<table>
+<thead>
+<tr><th>senhaDoPainel</th><th>destinoDeLaudo</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>9</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E os campos do exames forem preenchidos</p>
+<table>
+<thead>
+<tr><th>convenio</th><th>plano</th><th>crm</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>1</td><td>RMBRACOD</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o exame for adicionado ao atendimento</p>
+                                                            <p><p>E os campos do exames forem preenchidos</p>
+<table>
+<thead>
+<tr><th>convenio</th><th>plano</th><th>crm</th><th>exame</th></tr>
+</thead>
+<tbody>
+<tr><td>203</td><td>7355</td><td>1</td><td>RMBRACOE</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o exame for adicionado ao atendimento</p>
+                                                            <p>Então deverá ser exibido no grid o registro do exame inserido</p>
+                                                            <p>Quando o atendimento for salvo na entrada de atendimento</p>
+                                                            <p>Então o sistema redirecionará para a aba entrega de resultados</p>
+                                                            <p><p>Quando os campos da entrega de resultados forem preenchidos</p>
+<table>
+<thead>
+<tr><th>meioDeEntrega</th></tr>
+</thead>
+<tbody>
+<tr><td>COBRAR NA ENTREGA</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E a aba da entrega de resultados for salva</p>
+                                                            <p>E aguarde o para o proximo passo</p>
+                                                            <p>Então o sistema redirecionará para a aba de documentos</p>
+                                                            <p>Quando os documentos forem salvos</p>
+                                                            <p>E aguarde o para o proximo passo</p>
+                                                            <p>Então o sistema redirecionará para aba medicamentos</p>
+                                                            <p>Quando o medicamento for salvo na aba medicamentos</p>
+                                                            <p>Então o sistema redirecionará para a aba de pagamentos</p>
+                                                            <p><p>Quando os campos do tipo de pagamento forem preenchidos com base no valor total à pagar</p>
+<table>
+<thead>
+<tr><th>tipoDePagamento</th><th>observacao</th></tr>
+</thead>
+<tbody>
+<tr><td>Dinheiro</td><td>Automacao</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>E o pagamento for adicionado</p>
+                                                            <p>Então o sistema exibirá o registro do pagamento adicionando</p>
+                                                            <p>Quando eu acessar o pop-up de recibos</p>
+                                                            <p>E carregar os dados do paciente nas ações do recibo</p>
+                                                            <p>E salvar o recibo</p>
+                                                            <p>Então o sistema abrirá uma nova janela no browser</p>
+                                                            <p>Quando a nova janela do browser for finalizada</p>
+                                                            <p>E fechar o pop-up do recibo</p>
+                                                            <p>E finalizar o atendimento</p>
+                                                            <p>E confirmar a finalização do atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Quando for realizado a pesquisa do atendimento realizado</p>
+                                                            <p>Então o sistema exibe o registro do atendimento gerado</p>
+                                                            <p>E a cor do grid do atendimento não deve ser vermelha</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Recebimento de Material</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela Recebimento de Material</p>
+                                                            <p>Quando os campos unidade e atendimento gerados na entrado de atendimento forem preenchidos</p>
+                                                            <p>E for pesquisado na aba recebimento de materiais</p>
+                                                            <p>Então o atendimento é exibido na lista na aba recebimento de materiais</p>
+                                                            <p>Quando for selecionado Receber Todos na aba recebimento de materiais</p>
+                                                            <p>Então os status dos exames devem ser &quot;Triado&quot;</p>
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p><p>E que irei preencher o dominio</p>
+<table>
+<thead>
+<tr><th>dominio</th></tr>
+</thead>
+<tbody>
+<tr><td>tele_automation</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;Pleres&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Entrada de Atendimento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela para configuração da entrada de atendimento</p>
+                                                            <p><p>Dado que é preenchido as informações da configuração da entrada de atendimento</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>areaAtendimento</th><th>grupoImpressao</th></tr>
+</thead>
+<tbody>
+<tr><td>25</td><td>TELERADIOLOGIA</td><td>TELERADIOLOGIA</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando é solicitado o acesso ao atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Quando for realizado a pesquisa do atendimento realizado pelo código de Controle</p>
+                                                            <p>Então o sistema deve aguardar a integração ocorrer e exibir o atendimento gerado com código de Controle</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="eb033e488f5c4e859a681a4db6554baa2928125def32ade8816fb59ba90303a2">
+                                                    <div class="scenario-docs card-header undefined">
+                                                        <span class="scenario-heading">
+                                                                Telerradiologia - Realizar retorno status Nova Coleta - Conjugado
+                                                        </span>
+                                                        <span class="scenario-result-icon">
+                                                            
+
+                                                                <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Reconvocação</td></tr>
+<tr><td>Reconvocação</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema exibe a funcionalidade de Reconvocação</p>
+                                                            <p>Quando é realizada a pesquisa pelo numero de atendimento na Reconvocação</p>
+                                                            <p>Então o sistema exibe o atendimento na Reconvocação</p>
+                                                            <p><p>Quando a reconvocação do atendimento for realizada</p>
+<table>
+<thead>
+<tr><th>motivo</th><th>observacao</th></tr>
+</thead>
+<tbody>
+<tr><td>ERRO TECNICO</td><td>Automação</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve alterar o status do exame para &quot;Nova Coleta&quot; na Reconvocação</p>
+                                                            <p><p>Dado que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Reconvocação</td></tr>
+<tr><td>Manutenção de Reconvocação</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema exibe a funcionalidade Manutenção de Reconvocação</p>
+                                                            <p>Quando é realizada a pesquisa pelo numero de atendimento na Manutenção de Reconvocação</p>
+                                                            <p>Então o sistema exibe o atendimento na Manutenção de Reconvocação</p>
+                                                            <p>Quando for iniciado o contato na Manutenção de Reconvocação</p>
+                                                            <p>Então é exibida a aba Contato</p>
+                                                            <p>Quando o exame for retornado para o Apoio</p>
+                                                            <p>Então deve ser exibida a mensagem que o exame foi retornado com sucesso</p>
+                                                            <p>Dado que sou um usuario existente no Alliar</p>
+                                                            <p>E que preencho o dominio</p>
+                                                            <p><p>E que preencho login e senha corretamente</p>
+<table>
+<thead>
+<tr><th>login</th><th>senha</th></tr>
+</thead>
+<tbody>
+<tr><td>pixeon</td><td>021221</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando eu realizar o login</p>
+                                                            <p>Então o sistema realiza o login com sucesso e permite acesso ao Alliar</p>
+                                                            <p>E o sistema exibe os itens seguranca para serem selecionados</p>
+                                                            <p>Dado que estou no sistema &quot;Pleres&quot;</p>
+                                                            <p><p>E que estou na funcionalidade</p>
+<table>
+<thead>
+<tr><th>menu</th></tr>
+</thead>
+<tbody>
+<tr><td>Rotina Diária</td></tr>
+<tr><td>Entrada de Atendimento</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Então o sistema deve apresentar a tela para configuração da entrada de atendimento</p>
+                                                            <p><p>Dado que é preenchido as informações da configuração da entrada de atendimento</p>
+<table>
+<thead>
+<tr><th>unidade</th><th>areaAtendimento</th><th>grupoImpressao</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>UNIFICADA_1</td><td>SOMENTE VISUALIZAÇÃO (SEM IMPRESSORA)</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>Quando é solicitado o acesso ao atendimento</p>
+                                                            <p>Então o sistema apresenta a tela de pesquisa de atendimento</p>
+                                                            <p>Quando for realizado a pesquisa do atendimento realizado</p>
+                                                            <p>Então o sistema deve aguardar o retorno da integração ocorrer através do status &quot;Nova Coleta&quot;</p>
+                                                            <p>Quando for clicado no rastro do exame &quot;RMBRACOD&quot; na Entrada de Atendimento</p>
+                                                            <p>Então o sistema deve exibir a tela de rastros</p>
+                                                            <p>E o valor atual do Laboratório de Apoio deve estar em branco</p>
+                                                            <p>Quando o rastro do exame na Entrada de Atendimento for fechado</p>
+                                                            <p>E for clicado no rastro do exame &quot;RMBRACOE&quot; na Entrada de Atendimento</p>
+                                                            <p>Então o sistema deve exibir a tela de rastros</p>
+                                                            <p>E o valor atual do Laboratório de Apoio deve estar em branco</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Scenarios</th>
+                                                    <th scope="col" colspan="2" class="automated-stats">
+                                                        Automated
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"> </td>
+                                                </tr>
+                                                <tr class="summary-stats">
+                                                    <td class="aggregate-result-count">Total</td>
+                                                    <td class="automated-stats">0</td>
+                                                    <td class="automated-stats"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            
+                                                    </td>
+                                                    <td>74</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                <tr class="scenario-result UNDEFINED">
+                                                    <td>
+                                                            Telerradiologia - Realizar retorno status Nova Coleta - Conjugado
+                                                    </td>
+                                                    <td>35</td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td>
+                                                            <i class="fas fa-pause" title="No test has been implemented yet"></i>
+                                                        </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.4</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
