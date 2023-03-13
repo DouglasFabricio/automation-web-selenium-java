@@ -1,0 +1,205 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>Pixeon - Software de Gestão para Medicina Diagnóstica</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Pixeon">
+
+    <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script type="text/javascript" src="/ruxitagentjs_ICA2Vfqru_10227211007093412.js" data-dtconfig="rid=RID_1602885228|rpid=-1745163776|reportUrl=/rb_bf96696ego|app=bb33a8bd447ba055|rcdec=1209600000|featureHash=ICA2Vfqru|vcv=2|rdnt=1|uxrgce=1|bp=2|srmcrv=10|cuc=x5e6u9bk|mel=100000|dpvc=1|ssv=4|lastModification=1634744800804|dtVersion=10227211007093412|srmcrl=1|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA2Vfqru_10227211007093412.js"></script><link rel="icon" type="image/x-icon" href="/Images/ico/favicon.ico">
+    <link rel="shortcut icon" href="/Images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Images/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="/Images/ico/apple-touch-icon-57.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" type="text/css">
+    <link rel="stylesheet" href="/Content/bootstrap.css">
+    <link rel="stylesheet" href="/Content/animate.min.css">
+    <link rel="stylesheet" href="/Content/dm.css">
+    <link rel="stylesheet" href="/Content/pleres.css">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/swfstore.js"></script>
+    <style type="text/css">
+        .popover-content {
+            color: #803232;
+            font-weight: normal;
+            font-family: Arial;
+        }
+    </style>
+<style type="text/css"></style><script charset="utf-8" src="https://platform.twitter.com/js/moment~timeline.c7de492113f2eac2bb49ff9013aa2889.js"></script><script charset="utf-8" src="https://platform.twitter.com/js/timeline.55167c7072ca7f4363bf18820295ba93.js"></script></head>
+<body style="">
+    <div>
+        <div id="overlay_bg" class=""></div>
+        <div id="overlay_spin" class=""><div class="spinner" role="progressbar" style="position: relative; width: 0px; z-index: 2000000000; left: 0px; top: 0px;"><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-0-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(0deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-1-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(27deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(27deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-2-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(55deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(55deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-3-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(83deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(83deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-4-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(110deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(110deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-5-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(138deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(138deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-6-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(166deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(166deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-7-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(193deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(193deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-8-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(221deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(221deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-9-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(249deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(249deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-10-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(276deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(276deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-11-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(304deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(304deg) translate(30px, 0px); border-radius: 5px;"></div></div><div style="position: absolute; top: -5px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-60-25-12-13;"><div style="position: absolute; width: 30px; height: 10px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(332deg) translate(30px, 0px); border-radius: 5px; top: 2px;"></div><div style="position: absolute; width: 30px; height: 10px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(332deg) translate(30px, 0px); border-radius: 5px;"></div></div></div></div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon">
+                        <img class="modal-notificacao-icon" src="/Content/themes/images/icons-png/info-black.png"><h5 class="modal-title modal-notificacao-title" id="modalTitulo">Informativo</h5>
+                    </div>
+                    <button type="button" class="close modal-notificacao" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalMensagem">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnModalContinuar">Continuar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="master">
+        <!-- WRAP -->
+        <div class="wrap">
+            <div class="alerta-importante" style="display: none;">
+                <div id="conteudoNotificacao" class="container animated flipInX">
+                    
+                </div>
+            </div>
+
+            <header class="header animated fadeInDown">
+                <div class="container">
+                    <div class="row">
+                        <a href="http://www.pixeon.com" class="brand animated fadeInDown">
+                            <img src="/Images/pixeon_logo.png" alt="Digitalmed" width="200" height="60">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="header-ribbon-inf animated fadeInDown"></div>
+
+            <!-- MAIN -->
+            <div class="main">
+                <!-- LAYOUT DA PAGINA -->
+                <div class="headline animated fadeInUp" style="height: 500px; position: absolute; z-index: 0; background: none;">
+                    <input type="hidden" id="headline-img" value="/Images/img_bg_nova.jpg">
+                <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 500px; width: 1263px; z-index: -999998; position: absolute;"><img src="/Images/img_bg_nova.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1263px; height: 812.267px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -156.133px;"></div></div>
+
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-sm-4">
+                            <section class="login">
+                                <div class="logo-pleres animated fadeInUp">
+                                    <img src="/Images/img_logo_pleres.net_nova.png" alt="Pixeon Korus">
+                                </div>
+
+                                <h2 class="login-title animated fadeInDown">
+                                    <img src="/Images/ico/lock.png" alt=" " class="ico-lock">
+                                    <span>
+                                        Acesso do Cliente
+                                    </span>
+                                </h2>
+
+                                <form id="form-login" action="" class="form animated fadeInRight" role="form">
+                                    <div class="form-group">
+                                        <label for="txt-dominio">Domínio</label>
+                                        <input id="txt-dominio" type="text" class="form-control" name="Dominio" data-content="Informe o domínio">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txt-usuario">Usuário</label>
+                                        <input id="txt-usuario" type="text" class="form-control" name="Usuario" data-content="Informe o usuário">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="lbl-senha" for="txt-senha">Senha</label>
+                                        <input id="txt-senha" type="password" class="form-control" name="Senha" data-content="Informe a senha">
+                                        <input id="hdf-senha" type="hidden">
+                                    </div>
+                                    <div id="campos-senha" class="form-group hidden">
+                                        <label for="txt-confirma-senha">Confirme a Senha</label>
+                                        <input id="txt-confirma-senha" type="password" class="form-control" name="ConfirmaSenha" data-content="Informe a confirmação de senha">
+                                    </div>
+                                    <button id="btn-login" type="submit" class="btn btn-lg btn-block btn-primary" data-loading-text="Entrando...">
+                                        Acessar
+                                    </button>
+                                </form>
+                            </section>
+                            
+                        </aside>
+
+                        <div class="col-sm-8">
+
+                            <div class="content">
+                                <header class="content-header animated fadeIn">
+                                    <h1 class="animated fadeInUp">
+                                        <span class="hide">Pleres.net ·</span>
+                                        Gestão em Medicina Diagnóstica
+                                    </h1>
+                                    <p class="animated fadeInDown">
+                                        Conheça o sistema Korus, a solução definitiva para gerenciamento em Análises Clínicas e Diagnóstico por Imagem, desenvolvida nas plataformas Web e Desktop.
+                                        <a href="https://www.pixeon.com/solucoes/para-laboratorios/" class="saiba-mais">
+                                            Saiba mais »
+                                        </a>
+                                    </p>
+                                </header>
+
+                                <section class="novidades animated fadeInDown">
+                                    <h2>
+                                        Acompanhe as novidades
+                                    </h2>
+                                    <div class="twitter-feed animated fadeInLeft">
+
+                                        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: absolute; visibility: hidden; display: inline-block; width: 520px; height: 0px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px;" data-widget-id="profile:pixeon" title="Histórico do Twitter"></iframe><a class="btn btn-default twitter-timeline" height="470" href="https://twitter.com/pixeon" data-lang="pt-BR" data-widget-id="428653008964943872" data-chrome="nofooter" data-twitter-extracted-i1635258169152569615="true">Carregando Tweets de @pixeon...</a>
+                                        <script>
+                                            !function (d, s, id) {
+                                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                                if (!d.getElementById(id)) {
+                                                    js = d.createElement(s);
+                                                    js.id = id;
+                                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                }
+                                            }(document, "script", "twitter-wjs");
+                                        </script>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /LAYOUT DA PAGINA -->
+            </div>
+            <!-- /MAIN -->
+        </div>
+        <!-- /WRAP -->
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer animated fadeIn">
+        <p class="animated fadeInUp">
+            <a href="/" class="footer-logo" title="Página Inicial Pixeon">
+                <img src="/Images/pixeon_logo.png" alt="Digitalmed" width="120" height="40">
+            </a>
+        </p>
+        <p class="animated fadeInDown">
+            <a href="http://pixeon.com" class="">
+                <span class="year">2021</span>&nbsp;©
+                Pixeon.
+                Todos os direitos reservados.
+            </a>
+        </p>
+    </footer>
+    <!-- FOOTER -->
+    <!--[if lt IE 9]>
+        <link href="/Content/ie.css" rel="stylesheet" />
+        <script src="/Scripts/lib/html5.js"></script>
+        <script src="/Scripts/lib/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="/Scripts/lib/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/lib/spin.min.js"></script>
+    <script src="/Scripts/lib/bootstrap.js"></script>
+    <script src="/Scripts/lib/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="/Scripts/lib/jquery.backstretch.min.js"></script>
+    <script src="/Scripts/lib/toastr.js"></script>
+    <script src="/Scripts/dm.js"></script>
+    <script src="/Scripts/pleres.js"></script>
+    <script src="/Scripts/cloud-2.4.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.a53eecb4584348a2ad32ec2ae21f6eae.html?origin=http%3A%2F%2Fpleres.net" title="Twitter settings iframe" style="display: none;"></iframe></body></html>
